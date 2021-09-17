@@ -3,7 +3,7 @@
     $username = 'root';
     $password = '';
 
-    //Mysqli Orientado a objeto
+    //Mysqli Procedural
     $conexao = mysqli_connect($host, $username, $password);
 
 

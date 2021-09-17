@@ -9,12 +9,10 @@ com banco de dados:
 - PDO (PHP Data Objects)
     */
 
-    $host = 'localhost';
-    $username = 'root';
-    $password = '';
+    include('config.php');
 
     //Mysqli Orientado a objeto
-    $conexao = new mysqli($host, $username, $password);
+    $conexao = new mysqli(DB_NAME,DB_USER,DB_PASSWORD);
 
     //checar se a conexão está funcionando (ok)
     if ($conexao->connect_error) {
