@@ -23,6 +23,8 @@
                     <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
+                    <th scope="col">Região</th>
+                    <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,7 +34,10 @@
                     while($row = $res->fetch_assoc()){
                         echo "<tr>
                             <td>".$row['country_id']."</td>
-                            <td>".$row['country_name']."</td></tr>";
+                            <td>".$row['country_name']."</td>
+                            <td>".$row['region_id']."</td>
+                            <td><a href='index.php?p=paises/edit&id=".$row['country_id']."' class='btn btn-success btn-sm'>Editar</a></td>
+                            </tr>";
                     }
                     ?>
                 

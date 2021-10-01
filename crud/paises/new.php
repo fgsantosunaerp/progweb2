@@ -1,12 +1,30 @@
 <?php
-    include('../config.php');
 
-    //verificar a conexão
-    $conn = new mysqli($host, $user, $password, $dbname);
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        include('../config.php');
 
-    if($conn->connect_error){
-        die("Erro na conexão: ".$conn->connect_error);
+        //verificar a conexão
+        $conn = new mysqli($host, $user, $password, $dbname);
+    
+        if($conn->connect_error){
+            die("Erro na conexão: ".$conn->connect_error);
+        }
+        else {
+          $country_id   = $_POST['country_id'];
+          $country_name = $_POST['country_name'];
+          $region_id    = $_POST['region_id'];
+
+          $sql = "insert into countries (country_id,country_name,region_id) values ('$country_id','$country_name','$region_id')";
+          if($conn->query($sql) === TRUE ){
+            echo "Novo registro inserido.";
+          }
+          else {
+              echo "Falha: ".$sql."\n".$conn->error;
+          }
+        }
     }
+
+
 ?>
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Novo país</h1>
@@ -27,10 +45,3 @@
 
   <button type="submit" class="btn btn-primary">Inserir</button>
 </form>
-
-
-<?php
-    $conn->close();
-?>
-</body>
-</html>
