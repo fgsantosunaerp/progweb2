@@ -7,21 +7,27 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="regioes/index.php">
+            <a class="nav-link" href="regioes/index">
             <span data-feather="map-pin"></span>
             Regiões
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="paises/index.php">
+            <a class="nav-link" href="?p=paises/index">
             <span data-feather="globe"></span>
             Países
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="locations/index.php">
+            <a class="nav-link" href="locations/index">
             <span data-feather="map"></span>
             Localizações
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="?p=employees/employees">
+            <span data-feather="users"></span>
+            Funcionários
             </a>
         </li>
     </ul>
