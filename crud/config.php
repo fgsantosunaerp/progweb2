@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$password = "";
+$password = "password";
 $dbname = "hr";
 
 define('DB_NAME', 'hr');

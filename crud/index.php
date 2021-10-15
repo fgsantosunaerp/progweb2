@@ -3,6 +3,9 @@
     if(isset($_GET['p'])) {
         $arquivo = $_GET['p'];    
     }
+    else {
+        $arquivo = 'home';
+    }
 ?>
 
 

@@ -1,5 +1,8 @@
 <?php
-    include('../config.php');
+    $host = "localhost";
+    $user = "root";
+    $password = "password";
+    $dbname = "hr";
 
     $conn = new mysqli($host, $user, $password, $dbname);
     if($conn->connect_error){
